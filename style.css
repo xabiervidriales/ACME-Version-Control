@@ -1,0 +1,89 @@
+:root{
+    --columns: 1;
+}
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+body{
+    background-color: tomato;
+    padding: 10px;
+}
+h1{
+    padding: 20px 0px;
+}
+nav{
+    display: flex;
+    max-width: 720px;
+    gap: 2px;
+}
+a{
+    background-color: black;
+    color: white;
+    padding: 10px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    border: 1px solid black;
+    border-bottom: none;
+	width: 100%;
+	text-align: center;
+}
+main{
+    display: grid;
+    grid-template-columns: repeat(var(--columns), 1fr);
+    background-color: white;
+    padding: 5px;
+    gap: 5px;
+    border: 1px solid black;
+    border-top: none;
+    box-shadow: 0px 4px 6px #0009;
+}
+section{
+    background-color: whitesmoke;
+    box-shadow: 0px 4px 6px #0009;
+    padding: 5px;
+}
+h2{
+    padding: 10px 0px;
+}
+img{
+    float: right;
+	max-width: 100%;
+}
+footer{
+    background-color: gray;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+    box-shadow: 0px 4px 6px #0009;
+    border: 1px solid black;
+    border-top: none;
+}
+@media (min-width: 720px) and (max-width: 1200px){
+    main{
+        --columns: 2;
+    }
+}
+@media (min-width: 1200px) {
+    main{
+        --columns: 3;
+    }
+}
+.hide{
+    display: none;
+}
+.show{
+    background-color: white;
+    box-shadow: none;
+    grid-column-start: 1;
+    grid-column-end: 4;
+    grid-row-start: 1;
+    grid-row-end: 1;
+}
+.clicked {
+    background-color: white;
+    color: black;
+}
